@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5cb25f507c1df8e4",
+        "id": "06538c90944859eb",
         "type": "tabs",
         "children": [
           {
-            "id": "ae7a40032a7cae68",
+            "id": "786be06284682789",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nouvel onglet"
+              "title": "README"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 305.5
   },
   "right": {
     "id": "b93e74e568bc51f3",
@@ -90,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bienvenue.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour Bienvenue"
+              "title": "Rétrolien pour README"
             }
           },
           {
@@ -109,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bienvenue.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Liens sortants de Bienvenue"
+              "title": "Liens sortants de README"
             }
           },
           {
@@ -124,7 +128,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
+                "useHierarchy": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -138,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan"
+              "title": "Plan de README"
             }
           },
           {
@@ -161,11 +166,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 402.5
+    "width": 380.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
+      "obsidian-git:Open Git source control": true,
       "switcher:Ouvrir le sélecteur rapide": false,
       "graph:Ouvrir la vue graphique": false,
       "canvas:Créer une nouvelle toile": false,
@@ -173,14 +178,21 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "ae7a40032a7cae68",
+  "active": "dcec7ccf84de7c3c",
   "lastOpenFiles": [
     "Daily Notes/mars 4 2025.md",
+    "README.md",
+    "Bienvenue.md",
+    "Courses",
+    "Courses/Contemporary Korean Popular Culture",
+    "Courses/Algorithm",
+    "Courses/Computer Vision",
+    "Courses/Basic Korean",
+    "Courses/Compiler",
     "Canvas",
     "Daily Notes",
     "2025-03-04.md",
     "Sans titre.canvas",
-    "Bienvenue.md",
     "créez un lien.md"
   ]
 }
