@@ -1,0 +1,19 @@
+name: Trigger Website Build
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger website build
+        run: |
+          curl -X POST \
+          -H "Authorization: token ${{ secrets.REPO_ACCESS_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/cau-dream-team/cau-dream-team-website/dispatches \
+          -d '{"event_type": "update_notes"}'
