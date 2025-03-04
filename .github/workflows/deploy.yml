@@ -24,17 +24,17 @@ jobs:
 
       - name: Copy files to notes directory
         run: |
-          mkdir -p target-repo/notes
+          mkdir -p target-repo/public/notes
           # Copy all files except those starting with a dot
-          find . -type f -not -path "*/\.*" -not -path "./target-repo/*" | xargs -I{} cp --parents {} target-repo/notes/
+          find . -type f -not -path "*/\.*" -not -path "./target-repo/*" | xargs -I{} cp --parents {} target-repo/public/notes/
           # Copy all directories except those starting with a dot
-          find . -type d -not -path "*/\.*" -not -path "." -not -path "./target-repo" -not -path "./target-repo/*" | xargs -I{} mkdir -p target-repo/notes/{}
+          find . -type d -not -path "*/\.*" -not -path "." -not -path "./target-repo" -not -path "./target-repo/*" | xargs -I{} mkdir -p target-repo/public/notes/{}
 
       - name: Commit and push changes
         run: |
           cd target-repo
-          git add notes/
-          git commit -m "Update notes from source repository" || echo "No changes to commit"
+          git add public/notes/
+          git commit -m "Update notes" || echo "No changes to commit"
           git push
 
       - name: Trigger website build
