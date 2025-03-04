@@ -1,0 +1,46 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Clone target repository
+        run: |
+          git clone https://x-access-token:${{ secrets.REPO_ACCESS_TOKEN }}@github.com/cau-dream-team/cau-dream-team-website.git target-repo
+
+      - name: Copy files to notes directory
+        run: |
+          mkdir -p target-repo/notes
+          # Copy all files except those starting with a dot
+          find . -type f -not -path "*/\.*" -not -path "./target-repo/*" | xargs -I{} cp --parents {} target-repo/notes/
+          # Copy all directories except those starting with a dot
+          find . -type d -not -path "*/\.*" -not -path "." -not -path "./target-repo" -not -path "./target-repo/*" | xargs -I{} mkdir -p target-repo/notes/{}
+
+      - name: Commit and push changes
+        run: |
+          cd target-repo
+          git add notes/
+          git commit -m "Update notes from source repository" || echo "No changes to commit"
+          git push
+
+      - name: Trigger website build
+        run: |
+          curl -X POST \
+          -H "Authorization: token ${{ secrets.REPO_ACCESS_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/cau-dream-team/cau-dream-team-website/dispatches \
+          -d '{"event_type": "update_notes"}'
