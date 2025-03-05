@@ -1,1 +1,0 @@
-oici votre nouveau *coffre*.
