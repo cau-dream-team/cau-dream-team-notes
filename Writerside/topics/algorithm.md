@@ -1,3 +1,3 @@
 # Algorithm
 
-Hello, World!!
+Hello, World!
