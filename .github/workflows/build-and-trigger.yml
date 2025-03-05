@@ -2,36 +2,66 @@ name: Build and Trigger
 
 on:
   push:
-    branches: [main]
+    branches: ["main"]
+  workflow_dispatch:
+
+env:
+  DOCKER_VERSION: '243.22562'
 
 jobs:
   build:
+    strategy:
+      matrix:
+        instance: [cp, cv, ah, kl, kp]
     runs-on: ubuntu-latest
+    outputs:
+      algolia_artifact: ${{ steps.define-ids.outputs.algolia_artifact }}
+      artifact: ${{ steps.define-ids.outputs.artifact }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Build documentation
+      - name: Define instance id and artifacts
+        id: define-ids
+        run: |
+          INSTANCE="Writerside/${{ matrix.instance }}"
+          INSTANCE_ID_UPPER=$(echo "${{ matrix.instance }}" | tr '[:lower:]' '[:upper:]')
+          ARTIFACT="webHelp${INSTANCE_ID_UPPER}2-all.zip"
+          ALGOLIA_ARTIFACT="algolia-indexes-${INSTANCE_ID_UPPER}.zip"
+
+          echo "INSTANCE=$INSTANCE" >> $GITHUB_ENV
+          echo "INSTANCE_ID_UPPER=$INSTANCE_ID_UPPER" >> $GITHUB_ENV
+          echo "ARTIFACT=$ARTIFACT" >> $GITHUB_ENV
+          echo "ALGOLIA_ARTIFACT=$ALGOLIA_ARTIFACT" >> $GITHUB_ENV
+          echo "artifact=$ARTIFACT" >> $GITHUB_OUTPUT
+          echo "algolia_artifact=$ALGOLIA_ARTIFACT" >> $GITHUB_OUTPUT
+
+      - name: Build docs using Writerside Docker builder
         uses: JetBrains/writerside-github-action@v4
         with:
-          instance: All
-          artifact: webHelpALL2-all.zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          instance: ${{ env.INSTANCE }}
+          docker-version: ${{ env.DOCKER_VERSION }}
 
-      - name: Upload documentation
+      - name: Save artifact with build results
         uses: actions/upload-artifact@v4
         with:
-          name: docs-artifact
-          path: artifacts/webHelpALL2-all.zip
+          name: docs-${{ matrix.instance }}
+          path: |
+            artifacts/${{ steps.define-ids.outputs.artifact }}
+            artifacts/report.json
+            artifacts/${{ steps.define-ids.outputs.algolia_artifact }}
+          retention-days: 7
 
   trigger:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Trigger target repository
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: cau-dream-team/cau-dream-team-website
           event-type: update_notes
-          client-payload: '{"artifact_name": "docs-artifact"}'
+          client-payload: '{"artifact_names": ["docs-cp", "docs-cv", "docs-ah", "docs-kl", "docs-kp"]}'
