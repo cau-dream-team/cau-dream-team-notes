@@ -1,3 +1,1 @@
-# About Computer Vision
-
-Start typing here...
+# Computer Vision

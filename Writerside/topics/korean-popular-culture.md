@@ -1,3 +1,1 @@
-# About Korean Popular Culture
-
-Start typing here...
+# Korean Popular Culture
