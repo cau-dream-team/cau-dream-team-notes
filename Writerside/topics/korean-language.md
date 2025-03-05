@@ -1,0 +1,3 @@
+# About Korean Language
+
+Start typing here...

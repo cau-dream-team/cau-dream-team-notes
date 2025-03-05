@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="kp"
+                 name="Korean Popular Culture"
+                 start-page="korean-popular-culture.md">
+
+    <toc-element topic="korean-popular-culture.md"/>
+</instance-profile>
