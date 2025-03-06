@@ -58,19 +58,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
-          path: ./artifacts
-
-      - name: Display structure of downloaded files
-        run: ls -R
-
-      - name: Zip artifacts
-        run: zip -r release-artifacts.zip ./artifacts
+          path: artifacts
 
       - name: Create Release
         id: create_release
@@ -78,20 +72,22 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: release-${{ github.sha }}
-          release_name: Release ${{ github.sha }}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
 
       - name: Upload Release Assets
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./release-artifacts.zip
-          asset_name: release-artifacts.zip
-          asset_content_type: application/zip
+        run: |
+          for instance in cp cv ah kl kp; do
+            echo "➡️ Uploading assets for instance: $instance"
+            asset_path="./artifacts/$instance/webHelp$(echo $instance | tr '[:lower:]' '[:upper:]')2-all.zip"
+            asset_name="webHelp$(echo $instance | tr '[:lower:]' '[:upper:]')2-all.zip"
+            curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                 -H "Content-Type: application/zip" \
+                 --data-binary @"$asset_path" \
+                 "https://uploads.github.com/repos/${{ github.repository }}/releases/${{ steps.create_release.outputs.id }}/assets?name=$asset_name"
+          done
 
   trigger:
     needs: [build, create_release]
