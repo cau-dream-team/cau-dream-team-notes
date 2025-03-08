@@ -4,7 +4,25 @@
 
 <instance-profile id="cv"
                  name="Computer Vision"
-                 start-page="computer-vision.md">
+                 start-page="computer-vision-00.md">
 
-    <toc-element topic="computer-vision.md"/>
+    <toc-element topic="computer-vision-00.md"/>
+    <toc-element toc-title="Weeks">
+        <toc-element topic="computer-vision-01.md"/>
+        <toc-element topic="computer-vision-02.md"/>
+        <toc-element topic="computer-vision-03.md"/>
+        <toc-element topic="computer-vision-04.md"/>
+        <toc-element topic="computer-vision-05.md"/>
+        <toc-element topic="computer-vision-06.md"/>
+        <toc-element topic="computer-vision-07.md"/>
+        <toc-element topic="computer-vision-08.md"/>
+        <toc-element topic="computer-vision-09.md"/>
+        <toc-element topic="computer-vision-10.md"/>
+        <toc-element topic="computer-vision-11.md"/>
+        <toc-element topic="computer-vision-12.md"/>
+        <toc-element topic="computer-vision-13.md"/>
+        <toc-element topic="computer-vision-14.md"/>
+        <toc-element topic="computer-vision-15.md"/>
+        <toc-element topic="computer-vision-16.md"/>
+    </toc-element>
 </instance-profile>

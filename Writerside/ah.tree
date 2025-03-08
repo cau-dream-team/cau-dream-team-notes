@@ -4,7 +4,25 @@
 
 <instance-profile id="ah"
                  name="Algorithm"
-                 start-page="algorithm.md">
+                 start-page="algorithm-00.md">
 
-    <toc-element topic="algorithm.md"/>
+    <toc-element topic="algorithm-00.md"/>
+    <toc-element toc-title="Weeks">
+        <toc-element topic="algorithm-01.md"/>
+        <toc-element topic="algorithm-02.md"/>
+        <toc-element topic="algorithm-03.md"/>
+        <toc-element topic="algorithm-04.md"/>
+        <toc-element topic="algorithm-05.md"/>
+        <toc-element topic="algorithm-06.md"/>
+        <toc-element topic="algorithm-07.md"/>
+        <toc-element topic="algorithm-08.md"/>
+        <toc-element topic="algorithm-09.md"/>
+        <toc-element topic="algorithm-10.md"/>
+        <toc-element topic="algorithm-11.md"/>
+        <toc-element topic="algorithm-12.md"/>
+        <toc-element topic="algorithm-13.md"/>
+        <toc-element topic="algorithm-14.md"/>
+        <toc-element topic="algorithm-15.md"/>
+        <toc-element topic="algorithm-16.md"/>
+    </toc-element>
 </instance-profile>

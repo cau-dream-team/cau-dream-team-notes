@@ -4,7 +4,25 @@
 
 <instance-profile id="cp"
                  name="Compiler"
-                 start-page="compiler.md">
+                 start-page="compiler-00.md">
 
-    <toc-element topic="compiler.md"/>
+    <toc-element topic="compiler-00.md"/>
+    <toc-element toc-title="Weeks">
+        <toc-element topic="compiler-01.md"/>
+        <toc-element topic="compiler-02.md"/>
+        <toc-element topic="compiler-03.md"/>
+        <toc-element topic="compiler-04.md"/>
+        <toc-element topic="compiler-05.md"/>
+        <toc-element topic="compiler-06.md"/>
+        <toc-element topic="compiler-07.md"/>
+        <toc-element topic="compiler-08.md"/>
+        <toc-element topic="compiler-09.md"/>
+        <toc-element topic="compiler-10.md"/>
+        <toc-element topic="compiler-11.md"/>
+        <toc-element topic="compiler-12.md"/>
+        <toc-element topic="compiler-13.md"/>
+        <toc-element topic="compiler-14.md"/>
+        <toc-element topic="compiler-15.md"/>
+        <toc-element topic="compiler-16.md"/>
+    </toc-element>
 </instance-profile>

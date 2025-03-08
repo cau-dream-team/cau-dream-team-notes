@@ -4,7 +4,25 @@
 
 <instance-profile id="kl"
                  name="Korean Language"
-                 start-page="korean-language.md">
+                 start-page="korean-language-00.md">
 
-    <toc-element topic="korean-language.md"/>
+    <toc-element topic="korean-language-00.md"/>
+    <toc-element toc-title="Weeks">
+        <toc-element topic="korean-language-01.md"/>
+        <toc-element topic="korean-language-02.md"/>
+        <toc-element topic="korean-language-03.md"/>
+        <toc-element topic="korean-language-04.md"/>
+        <toc-element topic="korean-language-05.md"/>
+        <toc-element topic="korean-language-06.md"/>
+        <toc-element topic="korean-language-07.md"/>
+        <toc-element topic="korean-language-08.md"/>
+        <toc-element topic="korean-language-09.md"/>
+        <toc-element topic="korean-language-10.md"/>
+        <toc-element topic="korean-language-11.md"/>
+        <toc-element topic="korean-language-12.md"/>
+        <toc-element topic="korean-language-13.md"/>
+        <toc-element topic="korean-language-14.md"/>
+        <toc-element topic="korean-language-15.md"/>
+        <toc-element topic="korean-language-16.md"/>
+    </toc-element>
 </instance-profile>

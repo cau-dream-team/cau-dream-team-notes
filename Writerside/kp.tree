@@ -4,7 +4,25 @@
 
 <instance-profile id="kp"
                  name="Korean Popular Culture"
-                 start-page="korean-popular-culture.md">
+                 start-page="korean-popular-culture-00.md">
 
-    <toc-element topic="korean-popular-culture.md"/>
+    <toc-element topic="korean-popular-culture-00.md"/>
+    <toc-element toc-title="Weeks">
+        <toc-element topic="korean-popular-culture-01.md"/>
+        <toc-element topic="korean-popular-culture-02.md"/>
+        <toc-element topic="korean-popular-culture-03.md"/>
+        <toc-element topic="korean-popular-culture-04.md"/>
+        <toc-element topic="korean-popular-culture-05.md"/>
+        <toc-element topic="korean-popular-culture-06.md"/>
+        <toc-element topic="korean-popular-culture-07.md"/>
+        <toc-element topic="korean-popular-culture-08.md"/>
+        <toc-element topic="korean-popular-culture-09.md"/>
+        <toc-element topic="korean-popular-culture-10.md"/>
+        <toc-element topic="korean-popular-culture-11.md"/>
+        <toc-element topic="korean-popular-culture-12.md"/>
+        <toc-element topic="korean-popular-culture-13.md"/>
+        <toc-element topic="korean-popular-culture-14.md"/>
+        <toc-element topic="korean-popular-culture-15.md"/>
+        <toc-element topic="korean-popular-culture-16.md"/>
+    </toc-element>
 </instance-profile>

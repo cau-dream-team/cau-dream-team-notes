@@ -1,3 +1,0 @@
-# Korean Language
-
-Hello, World!
