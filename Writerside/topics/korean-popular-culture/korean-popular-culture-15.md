@@ -1,3 +1,1 @@
-# 15. Korean Popular Culture
-
-Hello, World!
+# 15. Group Presentations 2

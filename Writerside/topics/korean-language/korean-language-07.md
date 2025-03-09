@@ -1,3 +1,3 @@
-# 07. Korean Language
+# 07. Leisure Activities 2
 
-Hello, World!
+## 수영할 줄 알아요

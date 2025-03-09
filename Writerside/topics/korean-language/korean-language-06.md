@@ -1,3 +1,3 @@
-# 06. Korean Language
+# 06. Leisure Activities 1
 
-Hello, World!
+## 수영할 줄 알아요

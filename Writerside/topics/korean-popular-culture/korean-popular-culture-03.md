@@ -1,3 +1,3 @@
-# 03. Korean Popular Culture
+# 03. Korean Cinema 2
 
-Hello, World!
+## Auteurist Tendency in the 1970s

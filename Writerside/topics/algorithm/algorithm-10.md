@@ -1,1 +1,1 @@
-# 10. Greedy algorithm 2
+# 10. Greedy Algorithm 2

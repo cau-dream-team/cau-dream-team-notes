@@ -1,3 +1,3 @@
-# 07. Korean Popular Culture
+# 07. Korean Cinema 6
 
-Hello, World!
+## Globalization

@@ -1,1 +1,1 @@
-# 12. Dynamic programming 2
+# 12. Dynamic Programming 2

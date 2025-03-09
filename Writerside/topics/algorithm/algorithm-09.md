@@ -1,1 +1,1 @@
-# 09. Greedy algorithm 1
+# 09. Greedy Algorithm 1

@@ -1,3 +1,1 @@
-# 14. Korean Popular Culture
-
-Hello, World!
+# 14. Group Presentations 1

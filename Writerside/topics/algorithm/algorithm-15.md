@@ -1,3 +1,3 @@
-# 15. Advanced topic
+# 15. Advanced Topic
 
-## Graph machine learning
+## Graph Machine Learning

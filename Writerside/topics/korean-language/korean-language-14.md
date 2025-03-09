@@ -1,3 +1,3 @@
-# 14. Korean Language
+# 14. Asking about transportation
 
-Hello, World!
+## 지하철로 30분쯤 걸려요

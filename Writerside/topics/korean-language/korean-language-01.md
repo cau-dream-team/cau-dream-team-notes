@@ -1,3 +1,1 @@
-# 01. Korean Language
-
-Hello, World!
+# 01. Introduction

@@ -1,3 +1,3 @@
-# 11. Korean Popular Culture
+# 11. K-Pop Music 1
 
-Hello, World!
+## 1960s & 70s Shin & Kim's

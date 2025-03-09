@@ -1,1 +1,1 @@
-# 14. Graph algorithm 2
+# 14. Graph Algorithm 2

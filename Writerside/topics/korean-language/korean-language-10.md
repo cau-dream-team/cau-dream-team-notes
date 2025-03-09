@@ -1,3 +1,3 @@
-# 10. Korean Language
+# 10. Proposals and Collaboration 2
 
-Hello, World!
+## 같이 영화 볼까요

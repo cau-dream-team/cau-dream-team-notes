@@ -1,3 +1,3 @@
-# 10. Korean Popular Culture
+# 10. NATIONAL HOLIDAY
 
-Hello, World!
+## Class Not in Session

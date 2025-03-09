@@ -1,3 +1,3 @@
-# 03. Basic sorting algorithms
+# 03. Basic Sorting Algorithms
 
-## Selection insertion bubble
+## Selection Insertion Bubble

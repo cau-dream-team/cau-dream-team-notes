@@ -1,3 +1,3 @@
-# 02. Korean Language
+# 02. Greeting and Introducing
 
-Hello, World!
+## 인사와 자기소개

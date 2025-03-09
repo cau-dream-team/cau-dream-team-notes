@@ -1,3 +1,3 @@
-# 09. Korean Popular Culture
+# 09. Korean Popular Music
 
-Hello, World!
+## A General Overview John Lie's Essay

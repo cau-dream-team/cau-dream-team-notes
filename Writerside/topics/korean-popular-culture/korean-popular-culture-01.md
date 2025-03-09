@@ -1,3 +1,3 @@
-# 01. Korean Popular Culture
+# 01. Introduction
 
 Hello, World!

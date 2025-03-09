@@ -1,1 +1,1 @@
-# 06. Max/min heap and heap sort
+# 06. Max/Min Heap and Heap Sort

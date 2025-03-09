@@ -1,3 +1,1 @@
-# 13. Korean Popular Culture
-
-Hello, World!
+# 13. The Birth of Contemporary K-Pop Culture

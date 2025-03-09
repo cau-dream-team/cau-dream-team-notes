@@ -1,1 +1,1 @@
-# 07. Sorting in linear time
+# 07. Sorting in Linear Time
